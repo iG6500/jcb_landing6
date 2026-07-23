@@ -1887,7 +1887,7 @@
           </div>
           <div class="product-price-current">12.500 HUF <span class="product-price-vat">+ ÁFA</span></div>
           <div class="product-actions">
-            <button class="btn-card-primary" onclick="csSelectProduct('Merch')">Kérem ezt</button>
+            <button class="btn-card-primary" onclick="csSelectProduct('Merchandise')">Kérem ezt</button>
             <button class="btn-card-icon" aria-label="Részletek">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2"/>
@@ -1965,7 +1965,7 @@
           </div>
           <div class="product-price-current">23.895 HUF <span class="product-price-vat">+ ÁFA</span></div>
           <div class="product-actions">
-            <button class="btn-card-primary" onclick="csSelectProduct('Szerszám &amp; emelés')">Kérem ezt</button>
+            <button class="btn-card-primary" onclick="csSelectProduct('Szerszám &amp; világítás')">Kérem ezt</button>
             <button class="btn-card-icon" aria-label="Részletek">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2"/>
@@ -1991,7 +1991,7 @@
           </div>
           <div class="product-price-current">22.530 HUF <span class="product-price-vat">+ ÁFA</span></div>
           <div class="product-actions">
-            <button class="btn-card-primary" onclick="csSelectProduct('Merch')">Kérem ezt</button>
+            <button class="btn-card-primary" onclick="csSelectProduct('Merchandise')">Kérem ezt</button>
             <button class="btn-card-icon" aria-label="Részletek">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2"/>
@@ -2176,7 +2176,7 @@
       </div>
     </div>
 
-    <form class="cta-form" id="cs-leadform" action="https://xtratech.us18.list-manage.com/subscribe/post?u=859ff0560bf14ca6c051f7f8e&amp;id=4774a6baa8&amp;f_id=0016abe6f0" method="post" target="_blank" novalidate>
+    <form class="cta-form" id="cs-leadform" action="https://xtratech.us18.list-manage.com/subscribe/post?u=859ff0560bf14ca6c051f7f8e&amp;id=4774a6baa8&amp;f_id=0002abe6f0" method="post" target="_blank" novalidate>
       <div class="form-title">Visszahívást kérek</div>
       <div class="form-subtitle">// 30 másodperc alatt kitölthető</div>
       <div class="form-required-note"><span class="req" style="color:var(--accent-orange)">*</span> A csillaggal jelölt mezők kötelezőek</div>
@@ -2211,25 +2211,22 @@
         </select>
       </div>
       <div class="form-group">
-        <label class="form-label" for="mce-MMERGE20">Mi érdekel?<span class="req">*</span></label>
-        <select name="MMERGE20" id="mce-MMERGE20" class="form-select" required>
+        <label class="form-label" for="mce-MMERGE19">Mi érdekel?<span class="req">*</span></label>
+        <select name="MMERGE19" id="mce-MMERGE19" class="form-select" required>
           <option value="">Válassz…</option>
           <option value="Az egész akció érdekel">Az egész akció érdekel</option>
           <option value="JOSKIN pótkocsi / gép">JOSKIN MODULO2 tartálykocsi</option>
           <option value="Kenőanyagok &amp; olajok">Kenőanyagok &amp; olajok (TOTAL, JCB motorolaj, fékfolyadék...)</option>
           <option value="Gumiabroncsok">Ascenso gumiabroncsok</option>
                     <option value="Gépalkatrészek">Gépalkatrészek (fékhenger, csapágy, KUHN kés...)</option>
-          <option value="Szerszám &amp; emelés">Szerszám (fúrószár készlet, szerszámos táska)</option>
-          <option value="Merch">JCB hátitáska / szerszámos táska / merch</option>
-          <option value="Egyéb - majd elmondom telefonon">Egyéb — majd elmondom telefonon</option>
+          <option value="Szerszám &amp; világítás">Szerszám (fúrószár készlet, szerszámos táska)</option>
+          <option value="Merchandise">JCB hátitáska / szerszámos táska / merch</option>
+          <option value="Egyéb">Egyéb — majd elmondom telefonon</option>
         </select>
       </div>
 
       <!-- Mailchimp tag (a listához kötött automatizációhoz szükséges) -->
-      <div hidden><input type="hidden" name="tags" value="3055668"></div>
-
-      <!-- Mailchimp tag (a listához kötött automatizációhoz szükséges) -->
-      <div hidden><input type="hidden" name="tags" value="3055668"></div>
+      <div hidden><input type="hidden" name="tags" value="3055716"></div>
 
       <!-- Mailchimp bot-csapda: NE töltsd ki, ne töröld, maradjon rejtve -->
       <div aria-hidden="true" style="position:absolute; left:-5000px;">
@@ -2306,7 +2303,7 @@
 
   // Gépajánlat "Érdeklődöm" – előválasztja a JOSKIN opciót és a kapcsolat-formhoz görget
   window.csSelectMachine = function(model) {
-    const sel = document.getElementById('mce-MMERGE20');
+    const sel = document.getElementById('mce-MMERGE19');
     if (sel) {
       const opt = Array.from(sel.options).find(o => o.value === 'JOSKIN pótkocsi / gép');
       if (opt) sel.value = opt.value;
@@ -2317,7 +2314,7 @@
 
   // Termékkártya "Érdeklődöm/Kérem ezt" – a kapcsolat-formhoz görget és beállítja a kategóriát
   window.csSelectProduct = function(category) {
-    const sel = document.getElementById('mce-MMERGE20');
+    const sel = document.getElementById('mce-MMERGE19');
     if (sel && category) {
       const opt = Array.from(sel.options).find(o => o.value === category);
       if (opt) sel.value = opt.value;
